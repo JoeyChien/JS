@@ -65,7 +65,7 @@ function calculate(cartAmount) {
     }else {
         discount = 0.9
     }
-    return cartAmount * discount
+    return cartAmount * discount;
 }
 
 console.log(calculate(50))
