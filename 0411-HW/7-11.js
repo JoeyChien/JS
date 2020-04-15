@@ -66,27 +66,21 @@ let discountList = [
 ]
     
 function buyOneFreeOne(product1, product2) {
-    let result = 0
     if (product1.price > product2.price) {
-        result = product1.price
+        return product1.price;
     }
-    result = product2.price
-    return result;
+    return product2.price;
 }
 
 function second50Off(product1, product2) {
-    let result = 0
     if (product1.price > product2.price) {
-        result = product1.price + product2.price * 0.5
+        return product1.price + product2.price * 0.5;
     }
-    result = product2.price + product1.price * 0.5
-    return result;
+    return product2.price + product1.price * 0.5;
 }
 
 function total(product1, product2, totalprice) {
-    let result = 0
-    result = parseInt(totalprice.split("_")[1])
-    return result;
+    return parseInt(totalprice.split("_")[1]);
 }
 
 
