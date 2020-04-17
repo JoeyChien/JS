@@ -1,0 +1,13 @@
+.hide {
+    display: none;
+}
+
+.wrapper{
+    border: 1px solid darkorange;
+}
+
+.large {
+    font-size: 22px;
+    color: blueviolet;
+    text-decoration-line: line-through;
+}
