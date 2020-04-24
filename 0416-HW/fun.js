@@ -39,7 +39,7 @@ function transcript2(str){
         'C': 'G',
         'G': 'C',
         'A': 'U',
-        'T': 'A'
+        'T': 'A',
     }
 
     let result = str.replace(/C|G|A|T/g, function(i) {
@@ -55,3 +55,54 @@ function transcript2(str){
 
 console.log(transcript2('ACGTATTCCCCC'));
 
+/* 老師的方法 */
+//object的最後也放','代表可能會再新增東西
+let dna_map = {
+    'C': 'G',
+    'G': 'C',
+    'A': 'U',
+    'T': 'A',
+}
+
+function translate(c){
+    return dnaMap[c]
+}
+
+function checkEnder(currentDna) {
+    let res = currentDna.split().slice(-3).join('')
+    console.log(res)
+    return ender.indexOf(res) > 0
+}
+
+function alwaysFalse(c) {
+    return false
+}
+
+let Rna = {
+    transcript3: function (dna, checkF = alwaysFalse) {
+        return dna.split()
+                  .map(translate)
+                  .reduce((accu, c) => {
+                    return checF(accu) ? accu : accu + c
+                 }, '')
+    }
+}
+
+
+let expected = "UGCACCAGAAUU"
+
+console.log(translate('A') === 'U')
+console.log(Rna.transcript('ACGTGGTCTTAA') === "UGCACCAGAAUU")
+console.log(Rna.transcript('ACGTATTCCCCC', hasEnder) === 'UGCAUAA')
+
+// indexOf
+let res46 = [1, 2, 3, 4, 5].indexOf(1)
+console.log(res46)
+let res48 = [1, 2, 3, 4, 5].indexOf(6)
+console.log(res48)
+
+// default parameter
+function foo(a, b) {
+  console.log(a)
+  console.log(b)
+}
