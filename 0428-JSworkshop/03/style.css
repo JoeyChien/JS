@@ -1,0 +1,9 @@
+.wrap{
+  margin-top: 20px;
+}
+.err {
+  width:100px;
+  background-color: #f0f000;  
+  padding: 20px;
+  font-size: 15px;
+}
