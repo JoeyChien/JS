@@ -11,14 +11,13 @@ todo:
     Errr * 3
 
 */
-var count = 1;
+let count = 2;
 let wrap = document.querySelector('#text-wrap')
+let btn = document.querySelector('button')
 
-document.querySelector('#myBtn').addEventListener('click', () => {
-  count++;
-  
-  wrap.appendChild(addDiv(count))
-})
+btn.addEventListener('click', function(){
+  wrap.appendChild(addDiv(count++)) // count++傳出去再++，++count加完再傳出去
+}, false)
 
 function addDiv(count){
   let ele = document.createElement('div');
